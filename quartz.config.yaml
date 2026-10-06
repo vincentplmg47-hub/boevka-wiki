@@ -7,7 +7,7 @@ configuration:
   analytics: null
   locale: ru-RU
   # адрес подставляется при публикации (см. build-wiki.sh); для превью — localhost:8092
-  baseUrl: "localhost:8092"
+  baseUrl: "vincentplmg47-hub.github.io/boevka-wiki"
   ignorePatterns:
     - private
     - templates
@@ -21,25 +21,25 @@ configuration:
       code: IBM Plex Mono
     colors:
       lightMode:
-        light: "#faf8f8"
-        lightgray: "#e5e5e5"
-        gray: "#b8b8b8"
-        darkgray: "#4e4e4e"
-        dark: "#2b2b2b"
-        secondary: "#284b63"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#fff23688"
+        light: "#f8f9fc"
+        lightgray: "#e2e6f0"
+        gray: "#9aa2b5"
+        darkgray: "#474e61"
+        dark: "#1d2233"
+        secondary: "#3f51ae"
+        tertiary: "#1e8e7e"
+        highlight: rgba(63, 81, 174, 0.10)
+        textHighlight: "#ffe08a88"
       darkMode:
-        light: "#161618"
-        lightgray: "#393639"
-        gray: "#646464"
-        darkgray: "#d4d4d4"
-        dark: "#ebebec"
-        secondary: "#7b97aa"
-        tertiary: "#84a59d"
-        highlight: rgba(143, 159, 169, 0.15)
-        textHighlight: "#b3aa0288"
+        light: "#0f1420"
+        lightgray: "#1d2432"
+        gray: "#66707f"
+        darkgray: "#c9d0de"
+        dark: "#e9edf5"
+        secondary: "#9db4ff"
+        tertiary: "#5fd3b7"
+        highlight: rgba(157, 180, 255, 0.12)
+        textHighlight: "#f0c05a55"
 plugins:
   - source: "@quartz-community/created-modified-date"
     enabled: true
@@ -47,8 +47,8 @@ plugins:
       defaultDateType: modified
       priority:
         - frontmatter
-        - git
         - filesystem
+        - git
     order: 10
   - source: "@quartz-community/syntax-highlighting"
     enabled: true
@@ -192,6 +192,8 @@ plugins:
       group: toolbar
   - source: "@quartz-community/breadcrumbs"
     enabled: true
+    options:
+      rootName: "Главная"
     layout:
       position: beforeBody
       priority: 5

@@ -1,0 +1,227 @@
+{
+  "nodes": [
+    {
+      "id": "title",
+      "type": "text",
+      "x": 0,
+      "y": 0,
+      "width": 760,
+      "height": 180,
+      "color": "5",
+      "text": "# 🛠 Боёвка Stellaris\n\nФан-мод для Stellaris: тактическая боёвка флотов в духе Total War — про космические корабли.\n\n**Колесо** — зум · перетаскивание — движение · клик по карточке — открыть страницу."
+    },
+    {
+      "id": "g-pipeline",
+      "type": "group",
+      "x": -40,
+      "y": 240,
+      "width": 2160,
+      "height": 330,
+      "color": "6",
+      "label": "План — 6 этапов"
+    },
+    {
+      "id": "s1",
+      "type": "file",
+      "file": "Этапы/Этап 1 — Прототип.md",
+      "x": 0,
+      "y": 320,
+      "width": 320,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "s2",
+      "type": "file",
+      "file": "Этапы/Этап 2 — Шортсы и девлоги.md",
+      "x": 350,
+      "y": 320,
+      "width": 320,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "s3",
+      "type": "file",
+      "file": "Этапы/Этап 3 — Telegram-канал.md",
+      "x": 700,
+      "y": 320,
+      "width": 320,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "s4",
+      "type": "file",
+      "file": "Этапы/Этап 4 — Запуск Boosty.md",
+      "x": 1050,
+      "y": 320,
+      "width": 320,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "s5",
+      "type": "file",
+      "file": "Этапы/Этап 5 — Посты по площадкам.md",
+      "x": 1400,
+      "y": 320,
+      "width": 320,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "s6",
+      "type": "file",
+      "file": "Этапы/Этап 6 — Steam Workshop.md",
+      "x": 1750,
+      "y": 320,
+      "width": 320,
+      "height": 110,
+      "color": "6"
+    },
+    {
+      "id": "g-materials",
+      "type": "group",
+      "x": -40,
+      "y": 640,
+      "width": 1460,
+      "height": 400,
+      "color": "4",
+      "label": "Материалы и справки"
+    },
+    {
+      "id": "m1",
+      "type": "file",
+      "file": "О проекте.md",
+      "x": 0,
+      "y": 720,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "m2",
+      "type": "file",
+      "file": "Дорожная карта.md",
+      "x": 350,
+      "y": 720,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "m3",
+      "type": "file",
+      "file": "Доска и правила.md",
+      "x": 700,
+      "y": 720,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "m4",
+      "type": "file",
+      "file": "Безопасность и доступы.md",
+      "x": 1050,
+      "y": 720,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "m5",
+      "type": "file",
+      "file": "Справки/Справка — Юридическая часть.md",
+      "x": 0,
+      "y": 890,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "m6",
+      "type": "file",
+      "file": "Справки/Справка — Boosty.md",
+      "x": 350,
+      "y": 890,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "m7",
+      "type": "file",
+      "file": "Справки/Справка — Продвижение.md",
+      "x": 700,
+      "y": 890,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    },
+    {
+      "id": "m8",
+      "type": "file",
+      "file": "Открытые вопросы.md",
+      "x": 1050,
+      "y": 890,
+      "width": 320,
+      "height": 110,
+      "color": "4"
+    }
+  ],
+  "edges": [
+    {
+      "id": "e-t-p",
+      "fromNode": "title",
+      "fromSide": "bottom",
+      "toNode": "g-pipeline",
+      "toSide": "top",
+      "label": "план"
+    },
+    {
+      "id": "e-p-m",
+      "fromNode": "g-pipeline",
+      "fromSide": "bottom",
+      "toNode": "g-materials",
+      "toSide": "top",
+      "label": "опираемся на материалы"
+    },
+    {
+      "id": "e12",
+      "fromNode": "s1",
+      "fromSide": "right",
+      "toNode": "s2",
+      "toSide": "left"
+    },
+    {
+      "id": "e23",
+      "fromNode": "s2",
+      "fromSide": "right",
+      "toNode": "s3",
+      "toSide": "left"
+    },
+    {
+      "id": "e34",
+      "fromNode": "s3",
+      "fromSide": "right",
+      "toNode": "s4",
+      "toSide": "left"
+    },
+    {
+      "id": "e45",
+      "fromNode": "s4",
+      "fromSide": "right",
+      "toNode": "s5",
+      "toSide": "left"
+    },
+    {
+      "id": "e56",
+      "fromNode": "s5",
+      "fromSide": "right",
+      "toNode": "s6",
+      "toSide": "left"
+    }
+  ]
+}

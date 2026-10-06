@@ -1,0 +1,237 @@
+@use "./variables.scss" as *;
+
+// ============================================================
+//  Боёвка Stellaris — кастомное оформление вики
+// ============================================================
+
+// Фон: мягкое «космическое» свечение
+body,
+#quartz-root {
+  background-image:
+    radial-gradient(60rem 32rem at 50% -10rem, color-mix(in srgb, var(--secondary) 8%, transparent), transparent 70%),
+    radial-gradient(46rem 26rem at 90% 110%, color-mix(in srgb, var(--tertiary) 6%, transparent), transparent 72%);
+  background-attachment: fixed;
+}
+
+// Заголовок страницы с акцентной полосой
+h1.article-title {
+  letter-spacing: -0.02em;
+
+  &::after {
+    content: "";
+    display: block;
+    width: 84px;
+    height: 4px;
+    margin-top: 0.7rem;
+    border-radius: 999px;
+    background: linear-gradient(90deg, var(--secondary), var(--tertiary));
+  }
+}
+
+// Разделы статьи
+article {
+  h2 {
+    letter-spacing: -0.01em;
+    padding-bottom: 0.3rem;
+    border-bottom: 1px solid var(--lightgray);
+  }
+
+  // Карточки-сетки на главной (Разделы / Справки / Этапы)
+  h2#разделы + ul,
+  h2#справки + ul,
+  h2#этапы + ul {
+    list-style: none;
+    padding-left: 0;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(290px, 1fr));
+    gap: 0.65rem;
+
+    > li {
+      margin: 0;
+      padding: 0.7rem 0.9rem;
+      border: 1px solid var(--lightgray);
+      border-radius: 12px;
+      background: color-mix(in srgb, var(--light) 55%, transparent);
+      transition: transform 0.16s ease, border-color 0.16s ease, box-shadow 0.16s ease;
+
+      &:hover {
+        transform: translateY(-2px);
+        border-color: color-mix(in srgb, var(--secondary) 55%, var(--lightgray));
+        box-shadow: 0 10px 26px -16px color-mix(in srgb, var(--secondary) 40%, transparent);
+      }
+
+      a.internal {
+        background: transparent;
+      }
+    }
+  }
+}
+
+// Ссылки: плавные переходы и мягкая подложка
+a {
+  transition: color 0.15s ease, background-color 0.15s ease;
+}
+
+a.internal {
+  border-radius: 6px;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--secondary) 14%, transparent);
+  }
+}
+
+// Callout-карточки
+.callout {
+  border-radius: 12px;
+  padding: 0 1.15rem;
+  box-shadow: 0 8px 24px -20px color-mix(in srgb, var(--dark) 45%, transparent);
+
+  .callout-title {
+    font-weight: 700;
+  }
+}
+
+// Таблицы
+article table {
+  border-collapse: separate;
+  border-spacing: 0;
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  overflow: hidden;
+  width: 100%;
+
+  th,
+  td {
+    padding: 0.5rem 0.8rem;
+    border-top: 1px solid var(--lightgray);
+  }
+
+  th {
+    background: color-mix(in srgb, var(--secondary) 9%, transparent);
+    text-align: left;
+  }
+
+  thead th {
+    border-top: none;
+  }
+
+  tbody tr {
+    transition: background-color 0.12s ease;
+
+    &:hover {
+      background-color: color-mix(in srgb, var(--secondary) 5%, transparent);
+    }
+  }
+}
+
+// Цитаты (не callout)
+blockquote:not(.callout) {
+  margin: 1.1rem 0;
+  padding: 0.35rem 1rem;
+  border-left: 3px solid var(--secondary);
+  border-radius: 0 12px 12px 0;
+  background: color-mix(in srgb, var(--secondary) 5%, transparent);
+}
+
+// Код
+code {
+  border-radius: 6px;
+}
+
+pre {
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+}
+
+// Разделители
+hr {
+  border: none;
+  height: 1px;
+  background: linear-gradient(90deg, transparent, var(--lightgray) 18%, var(--lightgray) 82%, transparent);
+}
+
+// Правый сайдбар: подписи секций
+.sidebar h3 {
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.09em;
+  color: var(--gray);
+}
+
+// Граф
+.graph-outer {
+  border: 1px solid var(--lightgray);
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+// Проводник
+.explorer {
+  a,
+  .folder-title {
+    border-radius: 8px;
+    transition: background-color 0.12s ease;
+  }
+
+  a:hover,
+  .folder-title:hover {
+    background-color: color-mix(in srgb, var(--secondary) 10%, transparent);
+  }
+}
+
+// Поиск
+.search-container {
+  backdrop-filter: blur(8px);
+  background: color-mix(in srgb, var(--light) 80%, transparent);
+}
+
+.search-bar {
+  border-radius: 12px;
+}
+
+// Кнопки-иконки
+.search-button,
+.darkmode,
+.readermode,
+.explorer-toggle {
+  border-radius: 8px;
+  transition: background-color 0.12s ease;
+
+  &:hover {
+    background-color: color-mix(in srgb, var(--secondary) 10%, transparent);
+  }
+}
+
+// Тег-пилюли
+a.internal.tag-link {
+  border-radius: 999px;
+  padding: 0.05rem 0.6rem;
+}
+
+// Картинки
+article img {
+  border-radius: 12px;
+}
+
+// Скроллбар
+* {
+  scrollbar-width: thin;
+  scrollbar-color: color-mix(in srgb, var(--gray) 55%, transparent) transparent;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  height: 10px;
+}
+
+::-webkit-scrollbar-thumb {
+  background: color-mix(in srgb, var(--gray) 45%, transparent);
+  border-radius: 8px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}

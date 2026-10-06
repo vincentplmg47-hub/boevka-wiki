@@ -1,6 +1,8 @@
 ---
 title: "🚀 Этап 6 — Steam Workshop"
 tags: [этап]
+status: "в плане"
+result: "Релиз в Steam Workshop"
 ---
 
 **Когда:** когда мод стабилен.

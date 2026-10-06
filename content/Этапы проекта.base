@@ -1,0 +1,33 @@
+filters:
+  and:
+    - file.hasTag("этап")
+properties:
+  file.name:
+    displayName: Название
+  status:
+    displayName: Статус
+  result:
+    displayName: Результат
+views:
+  - type: table
+    name: Таблица
+    order:
+      - file.name
+      - status
+      - result
+    sort:
+      - property: file.name
+        direction: ASC
+  - type: board
+    name: По статусу
+    groupBy:
+      property: status
+      direction: ASC
+    order:
+      - file.name
+  - type: cards
+    name: Карточки
+    order:
+      - file.name
+      - status
+      - result

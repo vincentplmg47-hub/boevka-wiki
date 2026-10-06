@@ -14,8 +14,8 @@
 
 1. `git clone -b v5 https://github.com/jackyzha0/quartz.git`
 2. `cd quartz && npm install --include=dev`
-3. Скопировать сюда `content/` и `quartz.config.yaml`:
-   `rsync -a --delete <этот-репозиторий>/content/ content/ && cp <этот-репозиторий>/quartz.config.yaml .`
+3. Скопировать сюда `content/` и настройки:
+   `rsync -a --delete <этот-репозиторий>/content/ content/ && cp <этот-репозиторий>/quartz.config.yaml . && cp <этот-репозиторий>/custom.scss quartz/styles/custom.scss`
 4. `npx quartz build` → готовый статический сайт в `quartz/public/`
 
 ## Публикация
